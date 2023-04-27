@@ -1,0 +1,21 @@
+<table>
+    <tr>
+    <th>ID</th>
+    <th>Nombre</th>
+    <th>Tipo</th>
+    <th>Fecha de Estreno</th>
+    <th>Publico</th>
+    <th>Foto</th>
+    <th>Detalle</th>
+    </tr>
+
+    <tr *ngFor="let item of tabla">
+        <td>{{item.id}}</td>
+        <td>{{item.nombre}}</td>
+        <td>{{item.tipo}}</td>
+        <td>{{item.fechaEstreno}}</td>
+        <td>{{item.publico}}</td>
+        <td><img src="{{item.foto}}" alt="" width="100px" height="150px"></td>
+        <td><button (click)="send(item)"> Mostrar Detalle </button></td>
+    </tr>
+</table>
